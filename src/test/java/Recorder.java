@@ -5,8 +5,8 @@ import scala.Option;
 public class Recorder {
   public static void main(String[] args) {
     RecorderPropertiesBuilder props = new RecorderPropertiesBuilder()
-      .simulationsFolder(IDEPathHelper.gradleSourcesDirectory.toString())
-      .resourcesFolder(IDEPathHelper.gradleResourcesDirectory.toString())
+      .simulationsFolder(IDEPathHelper.mavenSourcesDirectory.toString())
+      .resourcesFolder(IDEPathHelper.mavenResourcesDirectory.toString())
             .simulationPackage("org.churchofjesuschrist.temple.qa");
 
     GatlingRecorder.fromMap(props.build(), Option.apply(IDEPathHelper.recorderConfigFile));
